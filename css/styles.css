@@ -2,6 +2,7 @@ body {
   background-color: #e4e4e4;
   font-family: 'Neuton', serif;
   text-align: center;
+  position: relative;
 }
 
 .wrapper {
@@ -12,7 +13,41 @@ body {
 .logo {
   background: url(../img/logo-bg.png) no-repeat 50% 0;
   height: 300px;
-  margin: 30px;
+  margin: 40px;
+  position: absolute;
+  float: left;
+  width: 25%;
+  border: 2px solid green;
+  overflow: auto;
+}
+
+.logo img {
+  position: absolute;
+  top: 115px;
+  left: 80px;
+}
+
+.nav {
+  float: left;
+  width: 25%;
+}
+
+.content {
+  float: right;
+  width: 80%;
+}
+
+.people {
+  float: left;
+  margin: 15px;
+}
+
+.profile {
+  width: 175px;
+}
+
+.footer {
+  clear: both;
 }
 
 a {
@@ -51,7 +86,6 @@ ol, ul {
   letter-spacing: .02em;
 }
 
-
 @media screen and (min-width: 1300px) {
   body {
     position: relative;
@@ -85,6 +119,7 @@ ol, ul {
     display: inline;
     margin: 40px;
     float: left;
+    border-bottom: 1px solid black;
   }
 
   .profile {
@@ -107,13 +142,14 @@ ol, ul {
     margin-top: 140px;
   }
 
-  /*.main {
-    float: right;
-  }*/
-
   .footer {
     clear: both;
     text-align: center;
   }
+
+}
+
+@media screen and (max-width 600px) {
+
 
 }
