@@ -3,11 +3,12 @@ body {
   font-family: 'Neuton', serif;
   text-align: center;
   position: relative;
+  box-sizing: border-box;
 }
 
 .wrapper {
-  background: url(../img/top-banner.png) repeat-x;
   padding: 2em 0;
+  background: url(../img/top-banner.png) repeat-x;
 }
 
 .logo {
@@ -17,8 +18,6 @@ body {
   position: absolute;
   float: left;
   width: 25%;
-  border: 2px solid green;
-  overflow: auto;
 }
 
 .logo img {
@@ -27,15 +26,46 @@ body {
   left: 80px;
 }
 
-.nav {
+.header {
   float: left;
   width: 25%;
+  overflow: auto;
+}
+
+.nav {
+  position: absolute;
+  margin-top: 400px;
+  margin-left: 75px;
+}
+
+.nav li {
+  border-bottom: 1px solid black;
+  width: 150px;
+}
+
+.nav li:first-child {
+  border-top: 1px solid black;
 }
 
 .content {
   float: right;
-  width: 80%;
+  width: 75%;
 }
+
+.about h2 {
+    font-size: 30px;
+}
+
+.about p {
+  font-size: 18px;
+}
+
+.main h3 {
+  font-size: 25px;
+  font-weight: lighter;
+  background: url(../img/ornament.png) no-repeat 0 50%;
+}
+
 
 .people {
   float: left;
@@ -43,11 +73,18 @@ body {
 }
 
 .profile {
-  width: 175px;
+  width: 250px;
 }
 
 .footer {
   clear: both;
+  background: url(../img/ornament.png) 50% 0 repeat-x;
+  padding: 40px 0 20px;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 14px;
 }
 
 a {
@@ -95,7 +132,6 @@ ol, ul {
     float: left;
     width: 25%;
     position: absolute;
-    border: 2px solid orange;
   }
 
   .logo img {
@@ -108,18 +144,22 @@ ol, ul {
   .nav {
     position: absolute;
     top: 100px;
-    left: 750px;
+    right: 200px;
     text-align: center;
     margin: 20px auto;
-    border: 2px solid red;
+    width: 800px;
 
   }
 
   .nav li {
-    display: inline;
+    /*display: inline;*/
     margin: 40px;
     float: left;
     border-bottom: 1px solid black;
+  }
+
+  .nav li:first-child {
+    border-top: none;
   }
 
   .profile {
@@ -149,7 +189,42 @@ ol, ul {
 
 }
 
-@media screen and (max-width 600px) {
+@media screen and (max-width: 600px) {
 
+ .profile {
+   width: 200px;
+ }
+
+ .logo {
+   background: none;
+   width: 100%;
+   display: inline;
+ }
+
+ .nav {
+   margin-top: 4px;
+   width: 450px;
+   border-top: 1px solid black;
+ }
+
+
+ .nav li {
+   font-size: 10px;
+   float: left;
+   margin: 0px 15px;
+   width: 100px;
+ }
+
+ .nav li:first-child {
+   border-top: none;
+ }
+
+
+
+ .content {
+   float: none;
+   width: 100%;
+   margin-top: 300px;
+ }
 
 }
